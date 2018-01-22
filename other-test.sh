@@ -2,6 +2,7 @@
 
 set -x
 
+cd ~
 echo Download Phoronix Test Suite 7.6 stable and Install it...
 wget http://phoronix-test-suite.com/releases/phoronix-test-suite-7.6.0.tar.gz
 tar xzvf phoronix-test-suite-7.6.0.tar.gz
