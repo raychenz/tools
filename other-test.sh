@@ -7,6 +7,7 @@ wget http://phoronix-test-suite.com/releases/phoronix-test-suite-7.6.0.tar.gz
 tar xzvf phoronix-test-suite-7.6.0.tar.gz
 cd phoronix-test-suite
 sudo ./install-sh
+cd ~
 echo Phoronix test suite installation completed...
 
 echo Install php-cli, php-xml, php-zip...
@@ -18,8 +19,8 @@ phoronix-test-suite batch-install pts/aio-stress pts/iozone pts/sqlite pts/hdpar
 phoronix-test-suite batch-setup
 phoronix-test-suite batch-run pts/aio-stress pts/iozone pts/sqlite pts/hdparm-read pts/ramspeed pts/stream | tee pts$1.log
 phoronix-test-suite list-saved-results | tee pts_list_results$1.log 2>&1
-phoronix-test-suite result-file-to-csv *
-cp ~.phoronix-test-suite/test-results/* . 
+ls  ~/.phoronix-test-suite/test-results/ | xargs -L 1 phoronix-test-suite result-file-to-cvs
+
 
 
 echo Install sysbench...
