@@ -20,7 +20,7 @@ phoronix-test-suite batch-install pts/aio-stress pts/iozone pts/sqlite pts/hdpar
 phoronix-test-suite batch-setup
 phoronix-test-suite batch-run pts/aio-stress pts/iozone pts/sqlite pts/hdparm-read pts/ramspeed pts/stream | tee pts$1.log
 phoronix-test-suite list-saved-results | tee pts_list_results$1.log 2>&1
-ls  ~/.phoronix-test-suite/test-results/ | xargs -L 1 phoronix-test-suite result-file-to-cvs
+ls  ~/.phoronix-test-suite/test-results/ | xargs -L 1 phoronix-test-suite result-file-to-csv
 
 
 
