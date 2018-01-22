@@ -78,14 +78,9 @@ echo ==================================================== >> fio$1.log
 
 echo ==================FIO /raid Test================ >> fio$1.log
 echo Running FIO benchmark test on /raid
-fio fio_raid.conf | tee -a fio$1.log 2>&1
+sudo fio fio_raid.conf | tee -a fio$1.log 2>&1
 echo ==================================================== >> fio$1.log
 echo FIO test completde, the result is fio$1.log | tee -a fio$1.log
 
 
-
-#echo Running Phoronix test suite aio-stress Test...
-#echo ==================Phoronix test suite iozone Test================ >> pts.log
-#sudo phoronix-test-suite run pts/aio-stress | tee -a pts.log 2>&1
-#echo ==================================================== >> pts.log
 
